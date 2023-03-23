@@ -1,7 +1,27 @@
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
 
-Projectboard (...)
+<form action="/new" method="post">
 
+    <label>
+        Lijstje
+        <select>
+          <option value="kennisbank.html#waarneembaar">Vervoerregio Amsterdam</option>
+          <option value="kennisbank.html#bedienbaar">Gvb</option>
+        </select>
+      </label>
+
+    <label>
+        Website URL: 
+        <input type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>" >
+    </label>
+
+    <label>
+        Website ID: 
+        <input type="text" name="websiteId" id="websiteId" value="<%= locals.values?.websiteId ?? '' %>" >
+    </label>
+
+    <button type="submit">Toevoegen</button>
+</form>
 
 <%- include('./partials/foot') %>

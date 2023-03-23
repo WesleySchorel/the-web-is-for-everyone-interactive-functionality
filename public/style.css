@@ -32,13 +32,13 @@
   --accordion-active: #46BECD;
 
   --box-gradient: linear-gradient(to right, #B9005F, #E30059);
-  --box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  --box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 6px -1px, rgba(0, 0, 0, 0.3) 0px 1.5px 3.5px -1.5px;
 
   --footer: #444444;
 }
 
-/* DARKMODE
-html {
+/* DARKMODE */
+/* html {
   filter: invert(100%) hue-rotate(180deg);
 } */
 
@@ -379,19 +379,19 @@ input[type="checkbox"]{
 /* BUTTON */
 
 button {
-  color: #E30059;
-  background-color: #ffff;
+  color: #ffff;
+  background-color: #E30059;
   font-size: 16px;
   border: 2px solid #ffff;
   padding: 15px 50px;
   cursor: pointer;
   box-shadow: 1px 1px;
-  border-radius: 12px;
+  border-radius: 1rem;
 }
 
 button:hover {
   color: #ffff;
-  background-image: var(--header-gradient);
+  background: rgb(249, 0, 100);
 }
 
 /* BOXES */
@@ -536,45 +536,8 @@ code {
   }
 
 
-/* FORMULIER */
 
-  textarea {
-    resize: none;
-  }
 
-  label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-.submit {
-color: #ffff;
-background-image: var(--header-gradient);
-border-radius: 12px;
-width: 14rem;
-}
-
-.submit:hover {
-color: var(--c-magenta);
-background-color: #ffff;
-border-radius: 12px;
-border-color: var(--c-magenta);
-}
-
-@media (max-width: 600px) {
-.submit {
-color: #ffff;
-background-image: var(--header-gradient);
-border-radius: 12px;
-width: 100%;
-}
-}
 
 /* BACK TO TOP */
 
@@ -633,4 +596,69 @@ width: 100%;
   ::-webkit-scrollbar-thumb:hover {
     display: none;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FORMULIER */
+
+textarea {
+  resize: none;
+}
+
+label {
+  display: block;
+}
+
+form {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 6px -1px, rgba(0, 0, 0, 0.3) 0px 1.5px 3.5px -1.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+form label {
+  color: #000;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* form ::placeholder {
+  color: #000;
+  font-weight: 600;
+} */
+
+form button {
+  width: 20%;
+}
+
+form input {
+  background-color: lightgray;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+input, textarea {
+  width: 20%;
+  padding: 5px;
+  border: 1px solid #ccc;
 }

@@ -1,46 +1,66 @@
-// Importeer express uit de node_modules map
-import express, { json, response } from 'express'
+import express, { request, response } from 'express'
+import { fetchJson, postJson } from './helpers/fetchWrapper.js'
 
-const url = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1/principes'
-const data = await fetch(url). then((response) => response.json())
+const url = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1'
 
-// Maak een nieuwe express app aan
+// Maak een nieuwe express app
 const app = express()
 
-// Stel ejs in als template engine en geef de 'views' map door
+// Stel in hoe we express gebruiken
 app.set('view engine', 'ejs')
 app.set('views', './views')
-
-// Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
-// Maak een route voor de index
-app.get('/', function (req, res) {
-  // res.send('Hello World!')
-  res.render('index', {active: '/'})
+// Stel afhandeling van formulieren in
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+// Maak een route voor de index pagina
+app.get('/', (request, response) => {
+  fetchJson(url).then((data) => {
+    response.render('index', { data: data, active: '/' })
+  })
 })
 
-// Maak een route voor de index
-app.get('/toolboard', function (req, res) {
-  console.log(data)
-  res.render('toolboard', {api: data, active: '/toolboard'})
+// Route voor het projectboard
+app.get('/projectboard', function (request, response) {
+  fetchJson(`${url}/urls`).then((data) => {
+    response.render('projectboard', { api: data, active: '/projectboard' })
+  })
 })
 
-app.get('/projectboard', function (req, res) {
-  console.log(data)
-  res.render('projectboard', {api: data, active: '/projectboard'})
+// Route voor het toolboard
+app.get('/toolboard', function (request, response) {
+  fetchJson(`${url}/principes`).then((data) => {
+    response.render('toolboard', { api: data, active: '/toolboard' })
+  })
 })
 
-app.get('/contact', function (req, res) {
-  console.log(data)
-  res.render('contact', {api: data, active: '/contact'})
+// Route voor de contact pagina
+app.get('/contact', function (request, response) {
+  fetchJson(url).then((data) => {
+    response.render('contact', { api: data, active: '/contact' })
+  })
 })
 
-// Stel het poortnummer in waar express op gaat luisteren
+app.post('/new', (request, response) => {
+  console.log(request.body)
+  postJson(`${url}/urls`, request.body).then((data) => {
+    let newURL = { ...request.body }
+
+    if (data.success) {
+      response.redirect('/?urlPosted=true')
+    } else {
+      const errorMessage = data.message
+      const newData = { error: errorMessage, values: newURL }
+
+      response.render('projectboard', { data: newData, active: '/projectboard' })
+    }
+  })
+})
+
+// Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
-
-// Start express op, haal het ingestelde poortnummer op
 app.listen(app.get('port'), function () {
-  // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
