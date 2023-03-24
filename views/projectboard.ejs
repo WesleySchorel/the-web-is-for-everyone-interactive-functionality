@@ -1,22 +1,40 @@
 <%- include('./partials/head') %>
-<%- include('./partials/header') %>
+  <%- include('./partials/header') %>
 
-<form action="/new" method="post">
+    <article>
+      <h1>Projectboard</h1>
+      <p>Controleer via deze tool uw website op toegankelijkheid en help het web toegankelijk te maken voor iedereen.
+      </p>
+      <button>Doe de test</button>
+    </article>
 
-    <label>
-        Partner:
-        <select name="websiteId" id="websiteId">
-          <option value="lf7ymhtc055k0bw0bufs69q3">Vervoerregio Amsterdam</option>
-          <option value="cle6xd3nz2k910bw003pdleif">Gvb</option>
+    <form action="/new" method="post">
+      <h2>Website toevoegen.</h2>
+      <label>
+        Selecteer Partner *
+        <select name="websiteId" id="websiteId" value="<%= locals.values?.websiteId ?? '' %>">
+          <% data.websites.forEach(website=> { %>
+            <option value="<%= website.id %>">
+              <%= website.titel %>
+            </option>
+            <% }) %>
         </select>
       </label>
 
-    <label>
-        Website URL: 
-        <input type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>" >
-    </label>
+      <label>
+        Website URL *
+        <input type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>">
+      </label>
 
-    <button type="submit">Toevoegen</button>
-</form>
+      <button type="submit">Toevoegen</button>
+    </form>
 
-<%- include('./partials/foot') %>
+    <% data.websites.forEach(website=> { %>
+      <ul>
+        <li>
+          <%= website.titel %>
+        </li>
+      </ul>
+      <% }) %>
+
+        <%- include('./partials/foot') %>

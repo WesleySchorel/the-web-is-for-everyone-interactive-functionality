@@ -22,13 +22,6 @@ app.get('/', (request, response) => {
   })
 })
 
-// Route voor het projectboard
-app.get('/projectboard', function (request, response) {
-  fetchJson(`${url}/urls`).then((data) => {
-    response.render('projectboard', { api: data, active: '/projectboard' })
-  })
-})
-
 // Route voor het toolboard
 app.get('/toolboard', function (request, response) {
   fetchJson(`${url}/principes`).then((data) => {
@@ -36,10 +29,16 @@ app.get('/toolboard', function (request, response) {
   })
 })
 
+app.get('/projectboard', function (request, response) {
+  fetchJson(`${url}/websites`).then((data) => {
+    response.render('projectboard', { data: data, active: '/projectboard' })
+  })
+})
+
 // Route voor de contact pagina
 app.get('/contact', function (request, response) {
   fetchJson(url).then((data) => {
-    response.render('contact', { api: data, active: '/contact' })
+    response.render('contact', { data: data, active: '/contact' })
   })
 })
 
@@ -54,7 +53,9 @@ app.post('/new', (request, response) => {
       const errorMessage = data.message
       const newData = { error: errorMessage, values: newURL }
 
-      response.render('projectboard', { data: newData, active: '/projectboard' })
+      fetchJson(`${url}/websites`).then((data) => {
+        response.render('projectboard', { data: data, active: '/projectboard' })
+      })
     }
   })
 })
