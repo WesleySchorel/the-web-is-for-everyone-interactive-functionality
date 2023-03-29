@@ -1,12 +1,16 @@
 <%- include('./partials/head') %>
   <%- include('./partials/header') %>
 
-    <article>
-      <h1>Projectboard</h1>
-      <p>Controleer via deze tool uw website op toegankelijkheid en help het web toegankelijk te maken voor iedereen.
+    <!-- ARTICLE -->
+
+    <article class="intro">
+      <h1>Project board.</h1>
+      <p>Voeg websites toe aan onze tool en controleer onze partners op toegankelijkheid.
       </p>
       <button>Doe de test</button>
     </article>
+
+    <!-- FORM -->
 
     <form action="/new" method="post">
       <h2>Website toevoegen.</h2>
@@ -29,12 +33,4 @@
       <button type="submit">Toevoegen</button>
     </form>
 
-    <% data.websites.forEach(website=> { %>
-      <ul>
-        <li>
-          <%= website.titel %>
-        </li>
-      </ul>
-      <% }) %>
-
-        <%- include('./partials/foot') %>
+    <%- include('./partials/foot') %>
