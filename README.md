@@ -1,4 +1,4 @@
-# Vervoerregio Amsterdam Interactive functionality
+# Vervoerregio Amsterdam (the-web-is-for-everyone-interactive-functionality)
 
 ## Inhoudsopgave
 
@@ -19,6 +19,26 @@ https://dull-red-frog-garb.cyclic.app/
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+HTML
+
+
+CSS
+
+
+JS
+
+
+Express
+
+
+Node
+
+
+Rest API
+In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoerregio Amsterdam. De documentatie van deze Api is te vinden op: https://api.vervoerregio-amsterdam.fdnd.nl/
+
+
+Progresive enhancement
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
