@@ -1,5 +1,3 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
 # Vervoerregio Amsterdam Interactive functionality
 
 ## Inhoudsopgave
@@ -13,8 +11,8 @@
 
 ## Beschrijving
 <!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+![image](https://user-images.githubusercontent.com/112857487/230027165-67d740ef-87e9-4283-b418-f4c5c12498be.png)
+https://dull-red-frog-garb.cyclic.app/
 
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
@@ -27,6 +25,7 @@
 
 
 ## Bronnen
+> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 ## Licentie
 
