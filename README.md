@@ -21,6 +21,13 @@ De website bestaat uit een projectboard en een toolboard. Op de pagina waarop he
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Deze website is gebouwt met verschillende technologieën. De technologiën die ik heb gebruikt zijn Node, Express en EJS en een REST API en client-side JS, CSS en HTML.
+
+Rest API
+In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoerregio Amsterdam. De documentatie van deze Api is te vinden op: https://api.vervoerregio-amsterdam.fdnd.nl/
+
+
+
 HTML
 
 
@@ -34,7 +41,23 @@ Express
 
 
 Node
+```js
+app.post('/projectboard', (request, response) => {
+  console.log(request.body)
+  postJson(`${url}/urls`, request.body).then((data) => {
+    let newURL = { ...request.body }
 
+    if (data.success) {
+      response.redirect('/?urlPosted=true')
+    } else {
+      const errorMessage = data.message
+      const newData = { error: errorMessage, values: newURL }
+
+      response.redirect('/projectboard')
+    }
+  })
+})
+```
 
 Rest API
 In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoerregio Amsterdam. De documentatie van deze Api is te vinden op: https://api.vervoerregio-amsterdam.fdnd.nl/
@@ -51,10 +74,9 @@ Download de aanbevolen versie op nodejs.org en installeer vanaf deze wwebsite de
 Open de terminal in Visual Studio Code en installeer Node doormiddel van het commando ``npm init``. Voer hierna ``npm install`` uit. Om de pagina te open start je een server op door middel van ``npm start``. Als de server weer gesloten moet worden kan je ``control + c / ^c`` gebruiken.
 
 ## Bronnen
-Serverside Javascript error in form:
-https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
-
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+Bronnen die ik gelezen heb:
+* Client-side form validation: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+* Leertaak: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 ## Licentie
 This project is licensed under the terms of the [MIT license](./LICENSE).
