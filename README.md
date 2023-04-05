@@ -11,7 +11,8 @@
 
 ## Beschrijving
 <!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-![image](https://user-images.githubusercontent.com/112857487/230027165-67d740ef-87e9-4283-b418-f4c5c12498be.png)
+![image](https://user-images.githubusercontent.com/112857487/230037852-90d93918-4173-47e3-b728-c11b19aa1ff0.png)
+
 https://dull-red-frog-garb.cyclic.app/
 
 ## Gebruik
