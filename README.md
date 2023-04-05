@@ -11,12 +11,23 @@
 
 ## Beschrijving
 <!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
+Vervoerregio Amsterdam wilt een website waarop een overzicht van de verplichtingen voor toegankelijkheid van website's bekeken kunnen worden. Aan de hand van deze criteria die op de website te vinden zal zijn kan Vervoerregio Amsterdam haar partners controleren op toegankelijkheid.
+
+Website link: https://dull-red-frog-garb.cyclic.app/
+
+De twee userstories die ik heb uitgevoerd zijn:
+1. Als gebruiker wil ik een overzicht van toegankelijkheidsrichtlijnen kunnen bekijken, om te begrijpen wat er moet gebeuren om een website/app toegankelijker te maken.
+
+2. Als gebruiker wil ik detail informatie over een toegankelijkheidsrichtlijn bekijken, om te beoordelen of mijn website/app voldoet aan de richtlijn.
+
 ![image](https://user-images.githubusercontent.com/112857487/230037852-90d93918-4173-47e3-b728-c11b19aa1ff0.png)
 
 https://dull-red-frog-garb.cyclic.app/
 
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+De gebruikers zijn medewerkers van Vervoerregio Amsterdam. Zij kunnen deze website gebruiken haar partners te controleren op toegankelijkheid.
+
 De website bestaat uit een projectboard en een toolboard. Op de pagina waarop het projectboard zich bevindt kan je een knop vinden waarmee je websites van de partners van Vervoerregio Amsterdam kan toevoegen. Hieronder vind je een website overzicht waarzich alle geregistreerde websites te vinden zijn. Op de tweede pagina is een pagina met de succescriteria om aan een toegankelijke website te voldoen te vinden.
 
 ## Kenmerken
