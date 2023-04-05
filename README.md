@@ -1,4 +1,6 @@
-# Vervoerregio Amsterdam (the-web-is-for-everyone-interactive-functionality)
+# Vervoerregio Amsterdam Interactive-Functionality
+
+![image](https://user-images.githubusercontent.com/112857487/230173713-252ca90d-0945-4d72-a056-a8e28f84f10f.png)
 
 ## Inhoudsopgave
 
@@ -34,24 +36,53 @@ De website bestaat uit een projectboard en een toolboard. Op de pagina waarop he
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 Deze website is gebouwt met verschillende technologieën. De technologiën die ik heb gebruikt zijn Node, Express en EJS en een REST API en client-side JS, CSS en HTML.
 
-Rest API
+### Progressive Enhancement
+Progressive Enhancement is een ontwerpprincipe voor websites die ervoor zorgt dat de basisfunctionaliteit van een website altijd beschikbaar is. Zelfs als bepaalde delen van een website niet werken.
+
+Ik heb het formulier opgebouwt met Progressive Enchanement door te beginnen met een lege html pagina en het laag voor laag te bouwen. Valt er een laag weg, blijft het formulier werken.
+
+### Rest API
 In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoerregio Amsterdam. De documentatie van deze Api is te vinden op: https://api.vervoerregio-amsterdam.fdnd.nl/
 
 
+### CSS
+```
+input:invalid {
+  border: 2px solid red;
+}
 
-HTML
+input:valid {
+  border: 3px solid black;
+}
+```
 
+### JS
+```js
+// Zorgt ervoor dat de gebruiker een geldige URL invoert en geeft een foutmelding als de URL niet correct is.
 
-CSS
+ const url = document.getElementById("url");
 
+ url.addEventListener("input", (event) => {
+   if (url.validity.typeMismatch) {
+     url.setCustomValidity("Voeg een geldige link toe!");
+   } else {
+     url.setCustomValidity("");
+   }
+ });
+```
 
-JS
+### Express
+```js
+// Maakt een nieuwe express app
+const app = express()
 
+// Stelt in hoe we express gebruiken
+app.set('view engine', 'ejs')
+app.set('views', './views')
+app.use(express.static('public'))
+```
 
-Express
-
-
-Node
+### Node
 ```js
 app.post('/projectboard', (request, response) => {
   console.log(request.body)
@@ -70,7 +101,7 @@ app.post('/projectboard', (request, response) => {
 })
 ```
 
-Rest API
+### Rest API
 In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoerregio Amsterdam. De documentatie van deze Api is te vinden op: https://api.vervoerregio-amsterdam.fdnd.nl/
 
 
