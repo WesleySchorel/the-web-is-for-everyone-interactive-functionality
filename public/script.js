@@ -1,4 +1,5 @@
- /* ACCORDION */
+// ACCORDION
+
  let acc = document.getElementsByClassName("accordion");
  let i;
  
@@ -13,3 +14,25 @@
      } 
    });
  }
+
+// DIALOG
+
+ let button = document.getElementById('selecteer-richtlijn-button')
+ let dialogRichtlijnen = document.querySelector('#selecteer-richtlijn-dialog')
+ 
+ button.addEventListener('click', function() {
+   dialogRichtlijnen.showModal()
+ })
+ 
+ dialogRichtlijnen.addEventListener('submit', function() {
+   let selectThingy = document.querySelector('select')
+   location.href = selectThingy.value
+ })
+
+ 
+
+
+
+
+ 
+ 

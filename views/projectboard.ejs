@@ -3,34 +3,53 @@
 
     <!-- ARTICLE -->
 
-    <article class="intro">
-      <h1>Project board.</h1>
-      <p>Voeg websites toe aan onze tool en controleer onze partners op toegankelijkheid.
-      </p>
-      <button>Doe de test</button>
+    <article>
+      <h1>Projectboard.📌</h1>
+      <!-- <p>Bekijk en voeg partners van Vervoerregio toe en controlleer hen op toegankelijkheid.</p> -->
+      <button type="button" class="selecteer-richtlijn-button" id="selecteer-richtlijn-button">Website
+        Toevoegen</button>
     </article>
 
-    <!-- FORM -->
+    <!-- DIALOG -->
 
-    <form action="/new" method="post">
-      <h2>Website toevoegen.</h2>
-      <label>
-        Selecteer Partner *
-        <select name="websiteId" id="websiteId" value="<%= locals.values?.websiteId ?? '' %>">
-          <% data.websites.forEach(website=> { %>
-            <option value="<%= website.id %>">
-              <%= website.titel %>
-            </option>
+    <dialog id="selecteer-richtlijn-dialog">
+      <form action="/projectboard" method="post">
+        <h2>Website toevoegen.</h2>
+        <label>
+          Voeg een nieuwe link toe*
+          <input required type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>">
+        </label>
+        <label>
+          Selecteer bijhorende partner*
+          <select required name="websiteId" id="websiteId" value="<%= locals.values?.websiteId ?? '' %>">
+            <% websitesData.forEach(website=> { %>
+              <option value="<%= website.id %>">
+                <%= website.titel %>
+              </option>
+              <% }) %>
+          </select>
+        </label>
+
+        <button type="submit">Toevoegen</button>
+      </form>
+    </dialog>
+
+    <main>
+      <section>
+        <h2>Projecten Lijst</h2>
+        <div class="project-list">
+          <% urlsData.forEach(url=> { %>
+            <section class="info">
+              <h3>
+                <%= url.website.titel %>
+              </h3>
+              <a href="<%= url.url %>">
+                <%= url.url %>
+              </a>
+            </section>
             <% }) %>
-        </select>
-      </label>
-
-      <label>
-        Website URL *
-        <input type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>">
-      </label>
-
-      <button type="submit">Toevoegen</button>
-    </form>
+        </div>
+      </section>
+    </main>
 
     <%- include('./partials/foot') %>

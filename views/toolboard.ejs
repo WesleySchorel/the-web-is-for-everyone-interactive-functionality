@@ -1,22 +1,21 @@
 <%- include('./partials/head') %>
   <%- include('./partials/header') %>
 
-    <article class="kennisbank-article" id="top">
-      <h1>Instrumentarium</h1>
+    <article>
+      <h1>Instrumentarium🔧</h1>
       Vind hier meer informatie over de toegankelijkheid principes en richtlijnen:<% api.principes.forEach(principe=> {
         %>
         <%= principe.titel %>
-          <%})%>
+          <% }) %>
     </article>
 
     <% api.principes.forEach( principe=> { %>
-      <article class="kennisbank-article" id="waarneembaar">
+      <article>
         <h2>
           <%= principe.titel %>
         </h2>
-        <p>Verklaring Digitale toegankelijkheid | <%= principe.titel %>
+        <p><%- principe.beschrijving.html %>
             <hr>
-            <%- principe.beschrijving.html %>
         </p>
 
         <% principe.richtlijnen.forEach( richtlijn=> { %>
