@@ -46,7 +46,7 @@ In dit project maak ik gebruik van de REST API for Toolgankelijkheid van Vervoer
 
 
 ### CSS
-```
+```css
 input:invalid {
   border: 2px solid red;
 }
