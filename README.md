@@ -17,6 +17,7 @@ https://dull-red-frog-garb.cyclic.app/
 
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+De website bestaat uit een projectboard en een toolboard. Op de pagina waarop het projectboard zich bevindt kan je een knop vinden waarmee je websites van de partners van Vervoerregio Amsterdam kan toevoegen. Hieronder vind je een website overzicht waarzich alle geregistreerde websites te vinden zijn. Op de tweede pagina is een pagina met de succescriteria om aan een toegankelijke website te voldoen te vinden.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
@@ -53,5 +54,4 @@ Open de terminal in Visual Studio Code en installeer Node doormiddel van het com
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 ## Licentie
-
 This project is licensed under the terms of the [MIT license](./LICENSE).
