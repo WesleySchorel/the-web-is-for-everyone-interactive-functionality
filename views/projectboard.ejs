@@ -15,13 +15,16 @@
     <dialog id="selecteer-richtlijn-dialog">
       <form action="/projectboard" method="post">
         <h2>Website toevoegen.</h2>
-        <label>
+        <label for="url">
           Voeg een nieuwe link toe*
           <input required type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>">
         </label>
         <label>
           Selecteer bijhorende partner*
           <select required name="websiteId" id="websiteId" value="<%= locals.values?.websiteId ?? '' %>">
+
+            <!-- Voert een actie uit te voeren voor elk item in de API  -->
+            
             <% websitesData.forEach(website=> { %>
               <option value="<%= website.id %>">
                 <%= website.titel %>
@@ -38,6 +41,9 @@
       <section>
         <h2>Projecten Lijst</h2>
         <div class="project-list">
+
+            <!-- Voert een actie uit te voeren voor elk item in de API  -->
+
           <% urlsData.forEach(url=> { %>
             <section class="info">
               <h3>

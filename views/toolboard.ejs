@@ -3,6 +3,7 @@
 
     <article>
       <h1>Instrumentarium🔧</h1>
+      
       Vind hier meer informatie over de toegankelijkheid principes en richtlijnen:<% api.principes.forEach(principe=> {
         %>
         <%= principe.titel %>
@@ -17,6 +18,8 @@
         <p><%- principe.beschrijving.html %>
             <hr>
         </p>
+
+        // Voert een actie uit te voeren voor elk item in de API 
 
         <% principe.richtlijnen.forEach( richtlijn=> { %>
           <button class="accordion">

@@ -3,7 +3,7 @@ import { fetchJson, postJson } from './helpers/fetchWrapper.js'
 const url = 'https://api.vervoerregio-amsterdam.fdnd.nl/api/v1'
 
 
-const urlsData = await fetchJson(`${url}/urls?first=100`).then((data) => data);
+const urlsData = await fetchJson(`${url}/urls?first=300`).then((data) => data);
 const websitesData = await fetchJson(`${url}/websites`).then((data) => data);
 
 console.log(websitesData)
@@ -12,7 +12,6 @@ console.log(websitesData)
 const app = express()
 
 // Stelt in hoe we express gebruiken
-
 app.set('view engine', 'ejs')
 app.set('views', './views')
 app.use(express.static('public'))

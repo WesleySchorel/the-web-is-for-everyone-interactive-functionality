@@ -16,6 +16,7 @@
  }
 
 // DIALOG
+// Maakt een knop die een pop-upvenster opent en wanneer er iets wordt geselecteerd en op de knop 'submit' wordt geklikt, wordt de gebruiker naar een andere pagina gestuurd.
 
  let button = document.getElementById('selecteer-richtlijn-button')
  let dialogRichtlijnen = document.querySelector('#selecteer-richtlijn-dialog')
@@ -29,9 +30,18 @@
    location.href = selectThingy.value
  })
 
- 
+// FORM
+// Zorgt ervoor dat de gebruiker een geldige URL invoert en geeft een foutmelding als de URL niet correct is.
 
+ const url = document.getElementById("url");
 
+ url.addEventListener("input", (event) => {
+   if (url.validity.typeMismatch) {
+     url.setCustomValidity("Voeg een geldige link toe!");
+   } else {
+     url.setCustomValidity("");
+   }
+ });
 
 
  
