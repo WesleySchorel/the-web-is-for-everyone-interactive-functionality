@@ -18,10 +18,8 @@ Vervoerregio Amsterdam wilt een website waarop een overzicht van de verplichting
 Website link: https://dull-red-frog-garb.cyclic.app/
 
 ### Userstories
-De twee userstories die ik heb uitgevoerd zijn:
-1. Als gebruiker wil ik een overzicht van toegankelijkheidsrichtlijnen kunnen bekijken, om te begrijpen wat er moet gebeuren om een website/app toegankelijker te maken.
-
-2. Als gebruiker wil ik detail informatie over een toegankelijkheidsrichtlijn bekijken, om te beoordelen of mijn website/app voldoet aan de richtlijn.
+De userstorie die ik heb uitgevoerd is:
+1. Als gebruiker wil ik een URL kunnen toevoegen aan een website, zodat ik kan bijhouden aan welke toegankelijkheidsrichtlijnen die URL voldoet
 
 ![image](https://user-images.githubusercontent.com/112857487/230037852-90d93918-4173-47e3-b728-c11b19aa1ff0.png)
 
