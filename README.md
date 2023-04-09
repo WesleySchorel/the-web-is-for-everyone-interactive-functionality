@@ -117,6 +117,7 @@ Open de terminal in Visual Studio Code en installeer Node doormiddel van het com
 ## Bronnen
 Bronnen die ik gelezen heb:
 * Client-side form validation: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+* Popover: https://utilitybend.com/blog/open-ui-and-the-popover-api 
 * Leertaak: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 ## Licentie
